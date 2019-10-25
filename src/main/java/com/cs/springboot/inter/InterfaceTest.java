@@ -3,9 +3,9 @@ package com.cs.springboot.inter;
 /**
  * @author: cs
  * @date: 2019/08/14 16:17
- * @desc:
+ * @desc: 接口特性测试
  */
-public interface Test {
+public interface InterfaceTest {
     int i = 1;
 
     int insert();
@@ -19,6 +19,6 @@ public interface Test {
     }
 
     public static void main(String[] args) {
-        Test test ;
+        InterfaceTest test ;
     }
 }
