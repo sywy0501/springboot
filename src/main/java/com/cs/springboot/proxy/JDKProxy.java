@@ -7,7 +7,7 @@ import java.lang.reflect.Proxy;
 /**
  * @author: cs
  * @date: 2019/08/14 22:33
- * @desc: JDK代理  利用JDK的API动态在内存中构建代理对象
+ * @desc: JDK代理  利用JDK的API动态在内存中构建代理对象,是面向接口的代理模式
  *        代理对象不需要实现接口，但是目标对象一定要实现接口
  */
 public class JDKProxy {

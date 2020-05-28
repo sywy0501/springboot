@@ -1,5 +1,9 @@
 package com.cs.springboot.java8;
 
+import cn.hutool.core.util.ObjectUtil;
+import com.cs.springboot.java8.vo.Student;
+import com.cs.springboot.proxy.dao.UserDao;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -12,7 +16,7 @@ import java.util.stream.Stream;
  */
 public class Stream8 {
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
+        /*List<Integer> list = new ArrayList<>();
         for (int i=0;i<10;i++){
             list.add(i);
         }
@@ -31,7 +35,24 @@ public class Stream8 {
         list.stream().sorted(Comparator.comparing(a->a)).limit(5);
         list.stream().sorted(Comparator.comparing(a->a)).skip(5);
 
-        list.stream().map(a->a+1).forEach(System.out::println);
+        list.stream().map(a->a+1).forEach(System.out::println);*/
+
+        /*StringBuffer randomCode = new StringBuffer();
+        // 用字符数组的方式随机
+        String model = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        char[] m = model.toCharArray();
+        for (int j = 0; j < 6; j++) {
+            char c = m[(int) (Math.random() * 36)];
+            // 保证六位随机数之间没有重复的
+            if (randomCode.toString().contains(String.valueOf(c))) {
+                j--;
+                continue;
+            }
+            randomCode.append(c);
+        }
+        System.out.println(randomCode);*/
+        Student student = new Student();
+        System.out.println(ObjectUtil.defaultIfNull(student.getId(),"好"));
 
     }
 }

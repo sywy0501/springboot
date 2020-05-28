@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 /**
  * @author: cs
  * @date: 2019/08/15 9:18
- * @desc: Cglib代理 不需要目标对象有实现的接口
+ * @desc: Cglib代理 是字节码底层继承要代理的类实现的 在运行期动态扩展Java类，Spring在运行期通过继承要被代理的类，重写父类方法完成
  *        代理的类和对象不能为final否则报错，目标对象如果为final/static，就不会被拦截，无法执行代理类的业务方法
  */
 public class CglibProxy implements MethodInterceptor {

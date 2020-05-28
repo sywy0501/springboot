@@ -14,7 +14,10 @@ import java.util.concurrent.locks.ReentrantLock;
  *        -Xmx41m 最大堆
  *        -Xms41m 最小堆
  *        -Xmn10m 新生代
+ *        -Xss 线程栈大小
  *        -XX:+UseParallelGC
+ *
+ *        +PrintCommondLineFlags
  */
 public class GCDemo {
 
