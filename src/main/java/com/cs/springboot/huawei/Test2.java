@@ -6,29 +6,55 @@ import java.util.Stack;
 /**
  * @author: cs
  * @date: 2019/10/23 7:15 下午
- * @desc:
+ * @desc: j初始值为0，两个线程+1，两个线程-1，循环100次
  */
 public class Test2 {
 
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String a = in.nextLine();
-        byte[] s = a.getBytes();
-        int res = 0;
-        int start = 0;
-        Stack<Integer> m = new Stack<>();
-        for (int i=0;i<a.length();i++){
-            if (s[i]==40){
-                m.push(i);
-            }else {
-                m.pop();
-                if (m.empty()){
-                    m.push(i);
-                }else {
-                    res = Math.max(res,i-m.firstElement());
-                }
+    private int j=0;
+
+    private synchronized void  inc(){
+        j++;
+        System.out.println(Thread.currentThread().getName()+": "+j);
+    }
+
+    private synchronized void dec(){
+        j--;
+        System.out.println(Thread.currentThread().getName()+": "+j);
+    }
+
+    class Inc implements Runnable{
+
+        @Override
+        public void run() {
+            for (int i=0;i<100;i++){
+                inc();
             }
         }
-        System.out.println(res);
+    }
+
+    class Dec extends Thread{
+        @Override
+        public void run() {
+            for (int i=0;i<100;i++){
+                dec();
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Test2 test2 = new Test2();
+        Inc inc = test2.new Inc();
+
+        Thread thread = null;
+        for (int i=0;i<2;i++){
+            thread = new Thread(inc);
+            thread.start();
+        }
+
+        for (int i=0;i<2;i++){
+            thread = test2.new Dec();
+            thread.start();
+        }
     }
 }
