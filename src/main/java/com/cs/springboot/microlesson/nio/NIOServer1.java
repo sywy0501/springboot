@@ -1,5 +1,6 @@
-package com.cs.springboot.nio;
+package com.cs.springboot.microlesson.nio;
 
+import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.ServerSocketChannel;
@@ -53,6 +54,13 @@ public class NIOServer1 {
                         if (requestBuffer.position()==0){
                             continue;
                         }
+                        requestBuffer.flip();
+                        byte[] content = new byte[requestBuffer.limit()];
+                        requestBuffer.get(content);
+                        System.out.println(new String(content));
+                        System.out.println("收到数据，来自："+ch.getRemoteAddress());
+                    }catch (IOException e){
+                        e.printStackTrace();
                     }
                 }
             }

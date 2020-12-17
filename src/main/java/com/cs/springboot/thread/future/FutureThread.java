@@ -2,6 +2,7 @@ package com.cs.springboot.thread.future;
 
 import java.util.Date;
 import java.util.concurrent.Callable;
+import java.util.concurrent.Future;
 
 /**
  * @author: cs
