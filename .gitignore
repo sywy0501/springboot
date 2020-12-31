@@ -32,3 +32,6 @@ build/
 
 .Ds_Store
 .gitignore
+.gradle
+*.hprof
+*.hprof.*
