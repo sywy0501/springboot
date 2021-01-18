@@ -1,4 +1,4 @@
-package com.cs.springboot.inter;
+package com.cs.springboot.base.inter;
 
 /**
  * @author: cs

@@ -1,4 +1,4 @@
-package com.cs.springboot.lock;
+package com.cs.springboot.thread.lock;
 
 import java.util.concurrent.TimeUnit;
 

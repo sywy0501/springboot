@@ -1,4 +1,4 @@
-package com.cs.springboot.singleton;
+package com.cs.springboot.designPatterns.singleton;
 
 /**
  * @author: ChuShi
