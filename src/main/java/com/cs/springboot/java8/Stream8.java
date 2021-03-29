@@ -2,12 +2,6 @@ package com.cs.springboot.java8;
 
 import cn.hutool.core.util.ObjectUtil;
 import com.cs.springboot.java8.vo.Student;
-import com.cs.springboot.proxy.dao.UserDao;
-
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Stream;
 
 /**
  * @author: ChuShi

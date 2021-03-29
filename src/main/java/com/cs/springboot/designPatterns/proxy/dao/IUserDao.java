@@ -1,4 +1,4 @@
-package com.cs.springboot.proxy.dao;
+package com.cs.springboot.designPatterns.proxy.dao;
 
 /**
  * @author: cs

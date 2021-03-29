@@ -1,4 +1,4 @@
-package com.cs.springboot.proxy;
+package com.cs.springboot.designPatterns.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

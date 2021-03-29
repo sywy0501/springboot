@@ -1,6 +1,6 @@
-package com.cs.springboot.proxy;
+package com.cs.springboot.designPatterns.proxy;
 
-import com.cs.springboot.proxy.dao.IUserDao;
+import com.cs.springboot.designPatterns.proxy.dao.IUserDao;
 
 /**
  * @author: cs

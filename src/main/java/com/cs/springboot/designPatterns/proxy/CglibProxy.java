@@ -1,4 +1,4 @@
-package com.cs.springboot.proxy;
+package com.cs.springboot.designPatterns.proxy;
 
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
